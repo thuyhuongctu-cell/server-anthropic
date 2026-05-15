@@ -63,8 +63,8 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
         },
         model: {
           type: "string",
-          description: "Model ID to use (e.g., claude-3-opus-20240229)",
-          default: "claude-3-opus-20240229"
+          description: "Model ID to use (e.g., claude-sonnet-4-6, claude-opus-4-7, claude-haiku-4-5-20251001)",
+          default: "claude-sonnet-4-6"
         },
         max_tokens: {
           type: "number",
@@ -98,7 +98,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         }
 
         const result = await client.messages.create({
-          model: args.model || "claude-3-opus-20240229",
+          model: args.model || "claude-sonnet-4-6",
           max_tokens: args.max_tokens || 1024,
           messages: args.messages
         });
