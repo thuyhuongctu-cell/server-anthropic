@@ -40,9 +40,9 @@ This server explores efficient context window management through distributed pro
    * Track rate limit encounters
 
 2. Processing Distribution
-   * Haiku for rapid initial processing
-   * Sonnet for medium-sized aggregation
-   * Opus for comprehensive analysis
+   * claude-haiku-4-5 for rapid initial processing
+   * claude-sonnet-4-6 for medium-sized aggregation
+   * claude-opus-4-7 for comprehensive analysis
 
 ## Installation
 ```bash
@@ -66,7 +66,7 @@ Lists all available Anthropic models and their capabilities.
 {
   "models": [
     {
-      "name": "claude-3-opus-20240229",
+      "name": "claude-opus-4-7",
       "description": "Most powerful model for highly complex tasks",
       ...
     },
@@ -93,7 +93,7 @@ Send a message to an Anthropic model using the Messages API.
   "model": {
     "type": "string",
     "description": "Model ID to use",
-    "default": "claude-3-opus-20240229"
+    "default": "claude-sonnet-4-6"
   },
   "max_tokens": {
     "type": "number",
